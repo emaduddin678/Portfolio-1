@@ -11,6 +11,12 @@
       crossorigin="anonymous"
     ></script>
 
+    <!-- Iconscout link cdn  -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+
     <!-- css link  -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -23,41 +29,42 @@
           <ul class="nav_list grid">
             <li class="nav_item">
               <a href="#home" class="nav_link">
-                <i class="fa-solid fa-house-user nav_icon"></i> Home
+                <!-- <i class="fa-solid fa-house-user nav_icon"></i> Home -->
+                <i class="uil uil-estate nav_icon"></i> Home
               </a>
             </li>
             <li class="nav_item">
               <a href="#about" class="nav_link">
-                <i class="fa-regular fa-user nav_icon"></i> About
+                <i class="uil uil-user nav_icon nav_icon"></i> About
               </a>
             </li>
             <li class="nav_item">
               <a href="#skills " class="nav_link">
-                <i class="fa-regular fa-file-lines nav_icon"></i> Skill
+                <i class="uil uil-file-alt nav_icon"></i> Skill
               </a>
             </li>
             <li class="nav_item">
               <a href="#services " class="nav_link">
-                <i class="fa-solid fa-briefcase nav_icon"></i> Services
+                <i class="uil uil-briefcase-alt nav_icon"></i> Services
               </a>
             </li>
             <li class="nav_item">
               <a href="#portfolio" class="nav_link">
-                <i class="fa-regular fa-image nav_icon"></i> Portfolio
+                <i class="uil uil-scenery nav_icon"></i> Portfolio
               </a>
             </li>
             <li class="nav_item">
               <a href="#contact" class="nav_link">
-                <i class="fa-regular fa-message nav_icon"></i> Contact
+                <i class="uil uil-message nav_icon"></i> Contact
               </a>
             </li>
           </ul>
-          <i class="fa-solid fa-xmark nav_close" id="nav-close"></i>
+          <i class="fa-solid fa-xmark nav_close nav_icon" id="nav-close"></i>
         </div>
 
         <div class="nav_btns">
           <div class="nav_toggle" id="nav-toggle">
-            <i class="fa-solid fa-border-all"></i>
+            <i class="fa-solid fa-border-all nav_icon"></i>
           </div>
         </div>
       </nav>
@@ -68,45 +75,92 @@
       <!-- =================== HOME ================== -->
       <section class="home section" id="home">
         <div class="home_container container grid">
-          <div class="home_contact grid">
+          <div class="home_content grid">
             <div class="home_social">
               <a
                 href="https://www.linkedin.com/in/crystal-work-60a497204/"
                 target="_blank"
                 class="home_social-icon"
               >
-                <i class="fa-brands fa-linkedin-in"></i>
+                <i class="fa-brands fa-linkedin-in nav_icon"></i>
               </a>
               <a
                 href="https://dribbble.com/"
                 target="_blank"
                 class="home_social-icon"
               >
-                <i class="fa-brands fa-dribbble"></i>
+                <i class="fa-brands fa-dribbble nav_icon"></i>
               </a>
               <a
                 href="https://github.com/emaduddin678"
                 target="_blank"
                 class="home_social-icon"
               >
-                <i class="fa-brands fa-github"></i>
+                <i class="fa-brands fa-github nav_icon"></i>
               </a>
             </div>
             <div class="home_img">
-              <svg class="home_blob" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  fill="#000000"
-                  d="M41,31.6C27,47.8,-28.4,48.1,-42.1,32C-55.8,15.9,-27.9,-16.6,-0.2,-16.7C27.5,-16.8,55,15.4,41,31.6Z"
-                  transform="translate(100 100)"
-                />
-                <!-- <image class="home_blob-img" xlink:href="photos/emad.jpg"/> -->
-              </svg>
+              <img
+                src="photos/emad-removebg-preview.png"
+                class="home_blob-img"
+                alt="Photo"
+              />
             </div>
+            <div class="home_data">
+              <h1 class="home_title">Hi, I'am Emad Uddin Emad</h1>
+              <h3 class="home_subtitle">Frontend Developer</h3>
+              <p class="home_description">
+                Freshers in Web designing. Learning is my Power..
+              </p>
+              <a href="#contact" class="button button--flex">
+                Contact Me <i class="uil uil-message button_icon nav_icon"></i>
+              </a>
+            </div>
+          </div>
+          <div class="home_scroll">
+            <a href="#about" class="home_scroll-button button--flex">
+              <i class="uil uil-mouse-alt home_scroll-mouse nav_icon"></i>
+              <span class="home_scroll-name">Scroll down</span>
+              <i class="uil uil-arrow-down home_scroll-arrow nav_icon"></i>
+            </a>
           </div>
         </div>
       </section>
 
       <!-- =================== ABOUT ================== -->
+      <section class="about section" id="about">
+        <h2 class="section_title">About Me</h2>
+        <span class="section_subtitle">My introduction</span>
+
+        <div class="about_container container grid">
+          <img src="./photos/emad.jpg" alt="photos" class="about_img" />
+          <div class="about_data">
+            <p class="about_description">
+              Web developer, trying to learn properly..
+            </p>
+            <div class="about_info">
+              <div>
+                <span class="about_info-title"> 08+ </span>
+                <span class="about_info-name">Years <br> experience</span>
+              </div>
+              <div>
+                <span class="about_info-title"> 05+ </span>
+                <span class="about_info-name">Completed <br> project</span>
+              </div>
+              <div>
+                <span class="about_info-title"> 0 </span>
+                <span class="about_info-name">Companies <br> worked</span>
+              </div>
+              <div class="about_buttons">
+                <a download="" href="./cse syllebus/Computer Science and Engineering 2nd Year_Pub_Date_15092019.pdf" class="button button--flex" target="_blank">
+                  Download CV<i class="uil uil-airplay button_icon"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- =================== SKILLS ================== -->
       <!-- =================== QUALIFICATION ================== -->
       <!-- =================== SERVICES ================== -->
