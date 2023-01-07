@@ -32,7 +32,7 @@ navLink.forEach((n) => n.addEventListener("click", linkAction));
 const skillsContent = document.getElementsByClassName("skills_content");
 const skillsHeader = document.querySelectorAll(".skills_header");
 // skillsContent is a Array[1,2,3];
-// skills_header is a Array[1,2,3] of header under content 
+// skills_header is a Array[1,2,3] of header under content
 
 function toggleSkills() {
   let itemClass = this.parentNode.className;
@@ -67,9 +67,32 @@ tabs.forEach((tab) => {
     });
     target.classList.add("qualification_active");
 
-    tabs.forEach(tab => {
+    tabs.forEach((tab) => {
       tab.classList.remove("qualification_active");
-    })
+    });
     tab.classList.add("qualification_active");
+  });
+});
+
+// ============= SERVICES MODAL ===========
+const modalViews = document.querySelectorAll(".services_modal");
+const modalBtns = document.querySelectorAll(".services_button");
+const modalCloses = document.querySelectorAll(".services_modal-close");
+
+let modal = function (modalClick) {
+  modalViews[modalClick].classList.add("active-modal");
+};
+
+modalBtns.forEach((modalBtn, i) => {
+  modalBtn.addEventListener("click", () => {
+    modal(i);
+  });
+});
+
+modalCloses.forEach((modalClose) => {
+  modalClose.addEventListener("click", () => {
+    modalViews.forEach((modalView) => {
+      modalView.classList.remove("active-modal");
+    });
   });
 });
