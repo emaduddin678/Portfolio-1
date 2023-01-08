@@ -4,12 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio Website</title>
     <!-- FontAwesome icon -->
     <script
       src="https://kit.fontawesome.com/a7d30648ce.js"
       crossorigin="anonymous"
     ></script>
+
+    <!-- ================ SWIPER CSS =========== -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
 
     <!-- Iconscout link cdn  -->
     <link
@@ -19,6 +21,9 @@
 
     <!-- css link  -->
     <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Page title  -->
+    <title>Portfolio Website</title>
   </head>
   <body>
     <!-- HEADER  -->
@@ -360,7 +365,7 @@
           </div>
         </div>
       </section>
-      
+
       <!-- =================== QUALIFICATION ================== -->
       <section class="qualification section">
         <h2 class="section_title">Qualification</h2>
@@ -368,7 +373,10 @@
 
         <div class="qualification_container container">
           <div class="qualification_tabs">
-            <div class="qualification_button button--flex qualification_active" data-target="#education">
+            <div
+              class="qualification_button button--flex qualification_active"
+              data-target="#education"
+            >
               <i class="uil uil-graduation-cap qualification_icon"></i>
               Education
             </div>
@@ -381,7 +389,11 @@
 
           <div class="qualification_sections">
             <!-- ================== QUALIFICATION CONTENT 1 =============== -->
-            <div class="qualification_content qualification_active" data-content id="education">
+            <div
+              class="qualification_content qualification_active"
+              data-content
+              id="education"
+            >
               <!-- ============ QUALIFICATION 1 ========== -->
               <div class="qualification_data">
                 <div>
@@ -419,7 +431,6 @@
 
               <!-- ============ QUALIFICATION 3 ========== -->
               <div class="qualification_data">
-                
                 <div>
                   <h3 class="qualification_title">Web Development</h3>
                   <span class="qualification_subtitle"
@@ -495,7 +506,6 @@
 
               <!-- ============ QUALIFICATION 3 ========== -->
               <div class="qualification_data">
-
                 <div>
                   <h3 class="qualification_title">Backend Development</h3>
                   <span class="qualification_subtitle"
@@ -521,22 +531,23 @@
         <span class="section_subtitle">What I offer</span>
 
         <div class="services_container container grid">
-          
           <!-- =============== SERVICES 1 ============= -->
           <div class="services_content">
             <div>
               <i class="uil uil-web-grid services_icon"></i>
-              <h3 class="services_title">Web <br>Designer</h3>
+              <h3 class="services_title">Web <br />Designer</h3>
             </div>
 
-            <span class="button button--flex button--small button--link services_button">
+            <span
+              class="button button--flex button--small button--link services_button"
+            >
               View More
               <i class="uil uil-arrow-right button_icon"></i>
             </span>
 
             <div class="services_modal">
               <div class="services_modal-content">
-                <h4 class="services_modal-title">Web <br>Designer</h4>
+                <h4 class="services_modal-title">Web <br />Designer</h4>
                 <i class="uil uil-times services_modal-close"></i>
 
                 <ul class="services_modal-services grid">
@@ -565,17 +576,19 @@
           <div class="services_content">
             <div>
               <i class="uil uil-arrow services_icon"></i>
-              <h3 class="services_title">Frontend <br>Developer</h3>
+              <h3 class="services_title">Frontend <br />Developer</h3>
             </div>
 
-            <span class="button button--flex button--small button--link services_button">
+            <span
+              class="button button--flex button--small button--link services_button"
+            >
               View More
               <i class="uil uil-arrow-right button_icon"></i>
             </span>
 
             <div class="services_modal">
               <div class="services_modal-content">
-                <h4 class="services_modal-title">Frontend <br>Development</h4>
+                <h4 class="services_modal-title">Frontend <br />Development</h4>
                 <i class="uil uil-times services_modal-close"></i>
 
                 <ul class="services_modal-services grid">
@@ -604,17 +617,25 @@
           <div class="services_content">
             <div>
               <i class="uil uil-pen services_icon"></i>
-              <h3 class="services_title">Brand <br> Web Page Designer</h3>
+              <h3 class="services_title">
+                Brand <br />
+                Web Page Designer
+              </h3>
             </div>
 
-            <span class="button button--flex button--small button--link services_button">
+            <span
+              class="button button--flex button--small button--link services_button"
+            >
               View More
               <i class="uil uil-arrow-right button_icon"></i>
             </span>
 
             <div class="services_modal">
               <div class="services_modal-content">
-                <h4 class="services_modal-title">Brand <br> Web Page Designer</h4>
+                <h4 class="services_modal-title">
+                  Brand <br />
+                  Web Page Designer
+                </h4>
                 <i class="uil uil-times services_modal-close"></i>
 
                 <ul class="services_modal-services grid">
@@ -644,17 +665,27 @@
       <section class="portfolio section" id="portfolio">
         <h2 class="section_title">Portfolio</h2>
         <span class="section_subtitle">Most recent work</span>
-        
-        <div class="portfolio_container container">
-          <div>
+
+        <div class="portfolio_container container swiper swiper-container">
+          <div class="swiper-wrapper">
             <!-- =================== PORTFOLIO 1 ================== -->
-            <div class="portfolio_content grid">
-              <img class="portfolio_img" src="./photos/kv.png" alt="portfolio_pic">
-              
+            <div class="portfolio_content grid swiper-slide">
+              <img
+                class="portfolio_img"
+                src="./photos/kv.png"
+                alt="portfolio_pic"
+              />
+
               <div class="portfolio_data">
                 <h3 class="portfolio_title">DOM project</h3>
-                <p class="portfolio_description">After completing DOM tutorial from Sumit sir(Learn with sumit), I created this as practice...</p>
-                <a href="https://emaduddin678.github.io/Project_sumit-vdo_100/" class="button button--flex button--small portfolio_button">
+                <p class="portfolio_description">
+                  After completing DOM tutorial from Sumit sir(Learn with
+                  sumit), I created this as practice...
+                </p>
+                <a
+                  href="https://emaduddin678.github.io/Project_sumit-vdo_100/"
+                  class="button button--flex button--small portfolio_button"
+                >
                   Demo
                   <i class="uil uil-arrow-right button_icon"></i>
                 </a>
@@ -662,13 +693,22 @@
             </div>
 
             <!-- =================== PORTFOLIO 2 ================== -->
-            <div class="portfolio_content grid">
-              <img class="portfolio_img" src="./photos/dom-2.png" alt="portfolio_pic">
-              
+            <div class="portfolio_content grid swiper-slide">
+              <img
+                class="portfolio_img"
+                src="./photos/dom-2.png"
+                alt="portfolio_pic"
+              />
+
               <div class="portfolio_data">
                 <h3 class="portfolio_title">DOM project</h3>
-                <p class="portfolio_description">Change color by clicking, I created this as practice...</p>
-                <a href="https://emaduddin678.github.io/dom_project-2/" class="button button--flex button--small portfolio_button">
+                <p class="portfolio_description">
+                  Change color by clicking, I created this as practice...
+                </p>
+                <a
+                  href="https://emaduddin678.github.io/dom_project-2/"
+                  class="button button--flex button--small portfolio_button"
+                >
                   Demo
                   <i class="uil uil-arrow-right button_icon"></i>
                 </a>
@@ -676,26 +716,186 @@
             </div>
 
             <!-- =================== PORTFOLIO 3 ================== -->
-            <div class="portfolio_content grid">
-              <img class="portfolio_img" src="./photos/emad-color-2.png" alt="portfolio_pic">
-              
+            <div class="portfolio_content grid swiper-slide">
+              <img
+                class="portfolio_img"
+                src="./photos/emad-color-2.png"
+                alt="portfolio_pic"
+              />
+
               <div class="portfolio_data">
-                <h3 class="portfolio_title">This Page (portfolio-1)</h3>
-                <p class="portfolio_description">This is my one of the personalportofolio using pure html, css and javascript. I created this as practice...</p>
-                <a href="https://emaduddin678.github.io/Project_sumit-vdo_100/" class="button button--flex button--small portfolio_button">
+                <h3 class="portfolio_title">This portfolio</h3>
+                <p class="portfolio_description">
+                  This is my portofolio using vanilla html, css and
+                  javascript...
+                </p>
+                <a
+                  href="https://emaduddin678.github.io/Project_sumit-vdo_100/"
+                  class="button button--flex button--small portfolio_button"
+                >
                   Demo
                   <i class="uil uil-arrow-right button_icon"></i>
                 </a>
               </div>
             </div>
           </div>
+
+          <!-- Add Arrows -->
+          <div class="swiper-button-next">
+            <i class="uil uil-angle-right-b swiper_portfolio-icon"></i>
+          </div>
+          <div class="swiper-button-prev">
+            <i class="uil uil-angle-left-b swiper_portfolio-icon"></i>
+          </div>
+
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
         </div>
       </section>
-      <!-- ===================  ================== -->
-      <!-- ===================  ================== -->
+
+      <!-- ================== PROJECT IN MIND ================ -->
+      <section class="project section">
+        <div class="project_bg">
+          <div class="project_container container grid">
+            <div class="project_data">
+              <h2 class="project_title">Want to create a Web page??</h2>
+              <p class="project_description">
+                I can help you with my skills. I will do the best offer for
+                you..
+              </p>
+              <a href="#contact" class="button button--flex button--white">
+                Contact Me
+                <i class="uil uil-message project_icon button_icon"></i>
+              </a>
+            </div>
+
+            <img
+              src="./photos/contact me.png"
+              alt="contact_img"
+              class="project_img"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- =================== TESTIMONIAL ================== -->
+      <section class="testimonial section">
+        <h2 class="section_title">Testimonial</h2>
+        <span class="section_subtitle">My Client Review</span>
+
+        <div class="testimonial_container container swiper swiper-container">
+          <div class="swiper-wrapper">
+            <!-- =================== TESTIMONIAL 1================== -->
+            <div class="testimonial_content swiper-slide">
+              <div class="testimonial_data">
+                <div class="testimonial_header">
+                  <img
+                    src="./photos/emad-color-2.png"
+                    alt=""
+                    class="testimonial_img"
+                  />
+
+                  <div>
+                    <h3 class="testimonial_name">Client Name</h3>
+                    <span class="testimonial_client"
+                      >I don't have any Clients yet</span
+                    >
+                  </div>
+                </div>
+
+                <div>
+                  <i class="uil uil-star testimonial_icon-star"></i>
+                  <i class="uil uil-star testimonial_icon-star"></i>
+                  <i class="uil uil-star testimonial_icon-star"></i>
+                  <i class="uil uil-star testimonial_icon-star"></i>
+                  <i class="uil uil-star testimonial_icon-star"></i>
+                </div>
+              </div>
+
+              <p class="testimonial_description">
+                I don't have any Clients yet. I am trying my best to learn
+                properly..
+              </p>
+            </div>
+
+            <!-- =================== TESTIMONIAL 2================== -->
+            <div class="testimonial_content swiper-slide">
+              <div class="testimonial_data">
+                <div class="testimonial_header">
+                  <img
+                    src="./photos/emad-color-2.png"
+                    alt=""
+                    class="testimonial_img"
+                  />
+
+                  <div>
+                    <h3 class="testimonial_name">Client Name2</h3>
+                    <span class="testimonial_client"
+                      >I don't have any Clients yet 2</span
+                    >
+                  </div>
+                </div>
+
+                <div>
+                  <i class="uil uil-star testimonial_icon-star"></i>
+                  <i class="uil uil-star testimonial_icon-star"></i>
+                  <i class="uil uil-star testimonial_icon-star"></i>
+                  <i class="uil uil-star testimonial_icon-star"></i>
+                  <i class="uil uil-star testimonial_icon-star"></i>
+                </div>
+              </div>
+
+              <p class="testimonial_description">
+                I don't have any Clients yet. I am trying my best to learn
+                properly..
+              </p>
+            </div>
+
+            <!-- =================== TESTIMONIAL 3================== -->
+            <div class="testimonial_content swiper-slide">
+              <div class="testimonial_data">
+                <div class="testimonial_header">
+                  <img
+                    src="./photos/emad-color-2.png"
+                    alt=""
+                    class="testimonial_img"
+                  />
+
+                  <div>
+                    <h3 class="testimonial_name">Client Name 3</h3>
+                    <span class="testimonial_client"
+                      >I don't have any Clients yet 3</span
+                    >
+                  </div>
+                </div>
+
+                <div>
+                  <i class="uil uil-star testimonial_icon-star"></i>
+                  <i class="uil uil-star testimonial_icon-star"></i>
+                  <i class="uil uil-star testimonial_icon-star"></i>
+                  <i class="uil uil-star testimonial_icon-star"></i>
+                  <i class="uil uil-star testimonial_icon-star"></i>
+                </div>
+              </div>
+
+              <p class="testimonial_description">
+                I don't have any Clients yet. I am trying my best to learn
+                properly..
+              </p>
+            </div>
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination swiper_pagination-testimonial"></div>
+        </div>
+      </section>
+
+      <!-- =================== CONTACT ME ================== -->
     </main>
 
     <!-- ============FOOTER============ -->
+
+    <!-- SWIPER js link  -->
+    <script src="js/swiper-bundle.min.js"></script>
 
     <!-- javascript link -->
     <script src="js/main.js"></script>

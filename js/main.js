@@ -96,3 +96,41 @@ modalCloses.forEach((modalClose) => {
     });
   });
 });
+
+// ================== PORTFOLIO SWIPER ==================
+// import Swiper from "swiper/swiper-bundle.esm.js";
+// import "swiper/swiper-bundle.css";
+let swiperPortfolio = new Swiper(".portfolio_container", {
+  cssMode: true,
+  loop: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  mousewheel: true,
+  keyboard: true,
+});
+
+//===================== TESTIMONIAL SWIPER ============
+
+let swiperTestimonial = new Swiper(".testimonial_container", {
+  loop: true,
+  grabCursor: true,
+  spaceBetween: 48,
+
+  pagination: {
+    el: ".swiper-pagination",
+    dynamicBullets: true,
+    clickable: true,
+  },
+  breakpoints:{
+    568:{
+      slidePerview: 2,
+    }
+  }
+});
+
