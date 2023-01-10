@@ -52,9 +52,9 @@ skillsHeader.forEach((e) => {
 
 // ======== QUALIFICATION TABS ==========
 const tabs = document.querySelectorAll("[data-target]");
-console.log(tabs);
+// console.log(tabs);
 const tabContents = document.querySelectorAll("[data-content]");
-console.log(tabContents);
+// console.log(tabContents);
 
 tabs.forEach((tab) => {
   tab.addEventListener("click", () => {
@@ -127,10 +127,56 @@ let swiperTestimonial = new Swiper(".testimonial_container", {
     dynamicBullets: true,
     clickable: true,
   },
-  breakpoints:{
-    568:{
+  breakpoints: {
+    568: {
       slidePerview: 2,
-    }
-  }
+    },
+  },
 });
 
+// ================= SCROLL SECTIONS ACTIVE LINK ==============
+const sections = document.querySelectorAll("section[id]");
+
+function scrollActive() {
+  const scrollY = window.pageYOffset;
+  // console.log("Scroll down  = " + scrollY + "px");
+
+  sections.forEach((current) => {
+    const sectionHeight = current.offsetHeight;
+    // console.log("Height of section =  " + sectionHeight + "px");
+    const sectionTop = current.offsetTop-50;
+    // console.log("Top of section =  " + sectionTop + "px");
+    var sectionId = current.getAttribute("id");
+    // console.log("Name of section =  " + sectionId);
+    document
+      // .querySelector(".nav_menu a[href*=" + sectionId + "]")
+      // .classList.add("active-link");
+    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+      document
+        .querySelector(".nav_menu a[href*=" + sectionId + "]")
+        .classList.add("active-link");
+    } else {
+      document
+        .querySelector(".nav_menu a[href*=" + sectionId + "]")
+        .classList.remove("active-link");
+    }
+  });
+}
+window.addEventListener("scroll", scrollActive);
+
+/*==================== CHANGE BACKGROUND HEADER ====================*/
+function scrollHeader() {
+  const nav = document.getElementById("header");
+  // When the scroll is greater than 80 viewport height, add the scroll-header class to the header tag
+  if (this.scrollY >= 80) nav.classList.add("scroll-header");
+  else nav.classList.remove("scroll-header");
+}
+window.addEventListener("scroll", scrollHeader);
+
+/*==================== SHOW SCROLL TOP ====================*/ 
+function scrollUp(){
+    const scrollUp = document.getElementById('scroll-up');
+    // When the scroll is higher than 560 viewport height, add the show-scroll class to the a tag with the scroll-top class
+    if(this.scrollY >= 560) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll')
+}
+window.addEventListener('scroll', scrollUp)
