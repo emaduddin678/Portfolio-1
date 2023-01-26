@@ -1263,6 +1263,10 @@ img{
 
 /* For Large devices  */
 @media screen and (min-width: 1024px) {
+    .container{
+        max-width: 978px;
+    }
+
     .header,
     .main,
     .footer_container{
